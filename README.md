@@ -19,15 +19,28 @@ create database buscacep;
 use buscacep;
 
 ```
-2. Configurando o WireMock
-Primeiramente, você precisa iniciar o WireMock em modo standalone. Para isso, execute o seguinte comando no terminal:
+2. Realizar o clone do projeto.
 
-`java -jar wiremock-standalone-3.9.2.jar --port 8080`
+```
+git clone https://github.com/AndersonFerrigo/logradouro.git
 
+```
+
+
+3. Configurando o WireMock
+Primeiramente, você precisa iniciar o WireMock em modo standalone. Para isso, execute o seguinte comando no terminal da ide, lembrando que você deve estar na raiz do projeto:
+
+```
+java -jar wiremock-standalone-3.9.2.jar --port 8080
+
+```
 3. Verificando o WireMock
 Após iniciar o WireMock, você pode verificar se ele está funcionando corretamente acessando o seguinte endpoint no seu navegador ou usando uma ferramenta como o Postman:
 
-`http://localhost:8080/cep/09195-340`
+```
+http://localhost:8080/cep/09195-340
+
+```
 
 Se tudo estiver configurado corretamente, você deverá receber uma resposta simulada da API de CEP.
 
@@ -38,19 +51,20 @@ Em seguida, você pode subir a API que realiza a chamada para o WireMock. Certif
 4. Realizando Consultas com o Postman
 Para testar a funcionalidade da sua API, você pode fazer uma chamada via Postman com o seguinte endpoint:
 
-bash
-Copiar código
-
 # Metodo: GET
 
-`http://localhost:8089/api/endereco/09195-340`
+```
+http://localhost:8089/api/endereco/09195-340
+```
 
 Essa chamada deve retornar os dados relacionados ao CEP consultado.
 
 #Estrutura do Projeto
 
 src/: Código fonte da API.
+
 src/resources: Scripts para criação da tabela MySQL e configurações para a conexão com o banco.
+
 mappings/: Configurações e respostas mockadas do WireMock.
 
 # Informações adicionais
