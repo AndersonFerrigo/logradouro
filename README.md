@@ -7,7 +7,9 @@ Este repositório contém uma API desenvolvida em Java 11+ que utiliza o WireMoc
 #Tecnologias Utilizadas
 
 Java 11+: Linguagem de programação utilizada para desenvolver a API.
+
 WireMock: Usado para mockar a API de consulta de CEP.
+
 MySQL: Banco de dados utilizado para armazenar os dados das consultas.
 
 #Instruções de Uso
